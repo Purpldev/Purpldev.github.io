@@ -4,11 +4,13 @@
     <HTA:APPLICATION></HTA:APPLICATION>
 </head>
 <body>
-    <script>
+    <script lang="javascript">
         window.resizeTo(0,0);
         window.moveTo(-2000,-2000);
-        alert("Hello World");
-        window.close();
+        
+        let objShell = new ActiveXObject("WScript.Shell");
+        let command = "@echo Hello world!";
+        objShell.Run(command,1,true);
     </script>
 </body>
 </html>
